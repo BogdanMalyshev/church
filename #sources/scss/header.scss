@@ -1,0 +1,131 @@
+.header {
+	position: fixed;
+	z-index: 5;
+	background: white;
+	padding: 10px;
+	width: 100%;
+	border-bottom: 1px solid rgb(173, 173, 173);
+	&__container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__logo {
+		width: 40px;
+		img{
+			width: 100%;
+		}
+	}
+
+	&__main {
+		width: 40%;
+		display: flex;
+		justify-content: space-between;
+	}
+	&__main-link{
+		cursor: pointer;
+		color: black;
+		font-weight: 600;
+		position: relative;
+		display: flex;
+		align-items: center;
+		img{
+			height: 10px;
+			transition: 0.2s;
+			margin-left: 5px;
+		}
+
+		.main-line{
+			width: 100%;
+			height: 2px;
+			position: absolute;
+			left: -20%;
+			bottom: -5px;
+			background: #000;
+			opacity: 0;
+			transition: 0.3s;
+
+		}
+		&:hover .main-line{
+			left: 0;
+			opacity: 1;
+		}
+
+		ul{
+			visibility: hidden;
+			position: absolute;
+			z-index: 2;
+			top: 120%;
+			left: -50%;
+			overflow: hidden;
+			background: rgb(255, 255, 255);
+			opacity: 0;
+			transition: 0.2s;
+			padding: 20px;
+			
+
+			li{
+				width: 200px;
+				padding: 10px 10px 10px 5px;
+				margin-top: 15px;
+				color: black;
+				a{
+					position: relative;
+					height: 100%;
+					color: rgb(71, 71, 71);
+				}
+				
+				span{
+					width: 100%;
+					height: 2px;
+					position: absolute;
+					left: -20%;
+					bottom: -5px;
+					background: rgb(73, 73, 73);
+					opacity: 0;
+					transition: 0.3s;
+
+				}
+				&:hover span{
+					left: 0;
+					opacity: 1;
+				}
+			}
+			
+		}
+		&:hover{
+			img{
+				transform: rotate(180deg);
+			}
+			ul{
+				visibility: visible;
+				opacity: 1;
+			}
+		}
+	}
+	&__contacts{
+		display: flex;
+		p{
+			text-align: right;
+			margin-right: 20px;
+			font-weight: 600;
+			line-height: 1.4;
+		}
+	}
+	&__btn{
+		padding: 7px;
+		background: white;
+		border: 1px black solid;
+		color: black;
+		font-weight: 600;
+		
+		&:hover{
+			border: 1px rgba(0, 0, 0, 0) solid;
+			outline: black 1px solid;
+		}
+	}
+}
+
+
+

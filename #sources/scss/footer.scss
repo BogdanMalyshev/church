@@ -1,0 +1,41 @@
+.footer {
+   padding: 40px 0 40px 0;
+   background:#222222;
+   &__container {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+   }
+
+   &__main {
+      li{
+         margin-top: 10px;
+         a{
+            color: #636363;
+            font-size: 14px;
+            font-weight: 600;
+         }
+      }
+   }
+   
+
+	&__contacts {
+      display: flex;
+      color: #636363;
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 1.8;
+      text-align: center;
+	}
+
+   &__social {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      img{
+         width: 30px;
+         margin-top: 20px;
+      }
+   }
+}
+

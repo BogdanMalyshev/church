@@ -1,0 +1,22 @@
+@import "nullstyle.scss";
+@import "mixins.scss";
+@import "header.scss";
+@import "slider.scss";
+@import "footer.scss";
+
+*{
+	font-family: 'Open Sans', sans-serif;
+}
+
+body{
+	font-family: Arial, sans-serif;
+}
+.mtop{
+	height: 60px;
+}
+.container {
+	max-width: 1500px;
+	margin: 0 auto;
+	padding: 0 20px 0 20px;
+	
+}
