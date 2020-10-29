@@ -2,10 +2,12 @@
 @import "mixins.scss";
 @import "header.scss";
 @import "slider.scss";
+@import "broadcasting.scss";
 @import "footer.scss";
 
 *{
 	font-family: 'Open Sans', sans-serif;
+	box-sizing: border-box;
 }
 
 body{
