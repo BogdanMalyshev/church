@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="css/style.css">
 	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
-
+	<link rel="shortcut icon" href="img/favicon.png" type="image/png">
 	<title>Баптиская церковь Гданька</title>
 </head>
 <body>
@@ -19,8 +19,15 @@
 	</div>
 
 	<div class="header__main">
-			<a class = "header__main-link" href="index.html"><span class="main-line"></span>Главная</a>
-			<a class = "header__main-link" href="news.html"><span class="main-line"></span>Новости</a>
+			<span class = "header__main-link" >
+				<a href="index.html">Главная</a>
+				<img src="icons/down-arrow.svg" alt="">
+				<ul>
+					<li><a href="#news"><span></span>Новости</a></li>
+				</ul> 
+			</span>
+			
+			<a class = "header__main-link" href="media.html"><span class="main-line"></span>Медиа</a>
 			<a class = "header__main-link" href="ministries.html"><span class="main-line"></span>Наши служения</a>
 			<a class = "header__main-link" href="contacts.html"><span class="main-line"></span>Контакты</a>
 			<span class = "header__main-link" >
@@ -53,8 +60,7 @@
             <img src="img/bible.jpg" alt="">
             <div class="slider__text-wrap">
                <div class="slider__text">
-                  <h2>Домашняя группа
-                  по разбору Библии <br>
+                  <h2>Домашняя группа по разбору Библии <br>
                   <strong>Gdansk, Dąbrowskiego 11 <br> Воскресенье 14:00</strong></h2>
                </div>
             </div>
@@ -64,9 +70,8 @@
             <img src="img/gdansk.jpg" alt="">
             <div class="slider__text-wrap">
                <div class="slider__text">
-                  <h2>Приглашаем вас на служение! <br>
-                     <strong>Gdansk, Dąbrowskiego 11 <br>Воскресенье 14:00</strong></h2>
-                  <h3>Если есть вопросы напишите нам!</h3>
+                  <h3>Приглашаем вас на служение! <br>
+                     <strong>Gdansk, Dąbrowskiego 11 <br>Воскресенье 14:00</strong></h3>
                   <button href="contacts.html" class="slider__btn"><span></span> <div class="text-button"><p>Связаться с нами</p></div></button>
                </div>
             </div>
@@ -74,7 +79,7 @@
       </div>
    </div>
 </section><section class="broadcasting">
-    <div class="broadcasting__container">
+    <div class="broadcasting__container container">
         <div class="broadcasting__title">
             <h2 class="broadcasting__title">
                 Последняя трансляция:
@@ -101,7 +106,19 @@
             </div>
         </div>
     </div>
-</section><footer class="footer">
+</section><section class="news" >
+    <div id="news"></div>
+    <div class="news__container container">
+        <div class="news__title">
+            <h2>Новости нашей церкви:</h2>
+        </div>
+        <div class="news__cards">
+
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
    <div class="footer__container container">
       <div class="footer__ul">
          <ul class="footer__main">

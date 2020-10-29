@@ -1,6 +1,6 @@
 .footer {
    padding: 40px 0 40px 0;
-   background:#222222;
+   background:$black;
    &__container {
       display: flex;
       justify-content: space-around;
@@ -11,7 +11,7 @@
       li{
          margin-top: 10px;
          a{
-            color: #636363;
+            color: $gray;
             font-size: 14px;
             font-weight: 600;
          }
@@ -21,7 +21,7 @@
 
 	&__contacts {
       display: flex;
-      color: #636363;
+      color: $gray;
       font-size: 14px;
       font-weight: 600;
       line-height: 1.8;

@@ -1,8 +1,12 @@
+$blue:#f1c915;
+$black: #212121;
+$gray: #757575;
 @import "nullstyle.scss";
 @import "mixins.scss";
 @import "header.scss";
 @import "slider.scss";
 @import "broadcasting.scss";
+@import "news.scss";
 @import "footer.scss";
 
 *{
@@ -22,3 +26,4 @@ body{
 	padding: 0 20px 0 20px;
 	
 }
+
