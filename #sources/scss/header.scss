@@ -123,11 +123,13 @@
 		width: 130px;
 		background: none;
 		font-weight: 600;
-		border: 1px black solid;
+		border: 1px $black solid;
 		transition: 0.1s;
 		border-radius: 3px;
 		&:hover{
-			transform: translate(1px , -1px);
+			background:$gray;
+			border: 1px $gray solid;
+			color: white;
 		}
 	}
 }

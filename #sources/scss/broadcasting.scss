@@ -1,6 +1,7 @@
 .broadcasting {
 width: 100%;
 padding: 100px 0 100px 0;
+background: $liteGray;
     &__container {
         display: flex;
         flex-direction: column;
@@ -17,9 +18,7 @@ padding: 100px 0 100px 0;
         width: 30%;
     }
     &__title {
-        font-size: 30px;
-        margin-bottom: 40px;
-        font-weight: 300;
+        @include title($black);
     }
     &__subtitle {
         font-size: 25px;
