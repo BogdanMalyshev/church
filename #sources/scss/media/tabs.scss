@@ -1,0 +1,77 @@
+.tabs {
+    padding: 70px 0 60px 0;
+    &__container {}
+
+    &__title{
+        @include title ($black);
+    }
+    
+    &__btns {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    &__btn {
+        @include btn (40px, 130px, white);
+        border: 2px solid $black;
+        color: $black;
+        font-size: 15px;
+        font-weight: 600;
+        border-radius: 3px;
+        margin: 10px;
+    }
+
+    &__content {}
+
+    &__photos {
+        display: none;
+    }
+
+    &__photos.active{
+        display: block;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        grid-gap: 10px;
+        justify-items: center;
+    }
+
+    &__photo{
+        width: 100%;
+        height: 250px;
+        position: relative;
+        max-width: 400px;
+
+        img{
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+            object-position: top;
+        }
+    }
+
+    &__videos {
+        display: none;
+    }
+
+    &__videos.active{
+        display: block;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+        grid-gap: 10px;
+        justify-items:  center;
+    }
+
+    &__video {
+        width: 100%;
+        iframe{
+            width: 100%;
+        }
+    }
+}

@@ -63,12 +63,11 @@ class NewCard {
 }
 
 fetch("db.json")
-.then((result) => {
-  return result.json();
-})
+.then(result => result.json())
 .then(data => {
     data.news.forEach(({img, altimg, title, subtitle, text, data})=> {
    new NewCard(img, altimg, title, subtitle, text, data, '.news__cards' ).render();
    });
 });
     
+
