@@ -1,73 +1,41 @@
-'use strict';
+"use strict";
 
-// -----------------------------slider
-const slides = document.querySelector('.slider__slides'),
-      slide = document.querySelectorAll('.slider__slide');
+const btnConnect = document.querySelectorAll('.connectBtn'),
+        closeModal = document.querySelector(".close-modal"),
+        modalWrapper = document.querySelector(".modal__wrapper"),
+        modalContainer = document.querySelector(".modal__container"),
+        modalImg = document.querySelector(".modal__img"),
+        modal = document.querySelector(".modal");
 
-let step = 1;
 
-setInterval(()=>{
-
-   if(step > 0){
-      slide[step-1].classList.remove('active');
-   }else{
-      slide[slide.length-1].classList.remove('active');
-   }
-   slide[step].classList.add('active');
-   step++;
-   
-   if(step == slide.length){
-      step = 0;
-   }
-   
-  
-   
-},10000);
-
-// -----------------------------news-cards
-class NewCard {
-   constructor(img, altimg, title, subtitle, text, data, perentSelector, ...classes){
-       this.img = img;
-       this.altimg =altimg;
-       this.title = title;
-       this.subtitle = subtitle;
-       this.text = text;
-       this.perentSelector = document.querySelector(perentSelector);
-       this.classes = classes;
-       this.data = data;
-   }
-
-   render(){
-       const element = document.createElement('div');
-       if(this.classes.length === 0){
-           this.classes = 'news__card';
-           element.classList.add(this.classes);
-       }else{
-           this.classes.forEach(elem=>element.classList.add(elem)); 
-       }
-       
-       element.innerHTML = `
-         <div class="news__img">
-            <img src=${this.img} alt=${this.altimg}>
-            <div class="news__card-bg">
-               <img src="icons/loupe.svg">
-            </div>
-         </div>
-         <h3 class="news__card-title"> ${this.title}</h3>
-         <p>${this.subtitle}</p>
-         <span class="news__card-data">${this.data}</span>
-       `;
-
-       this.perentSelector.append(element);
-   }
-}
-
-fetch("db.json")
-.then(result => result.json())
-.then(data => {
-    data.news.forEach(({img, altimg, title, subtitle, text, data})=> {
-   new NewCard(img, altimg, title, subtitle, text, data, '.news__cards' ).render();
-   });
+btnConnect.forEach(e => {
+    e.addEventListener('click', ()=>{
+        const form = document.createElement('form');
+        form.classList.add('form');
+        form.innerHTML = `
+            <h2>Оставьте нам свои данные <br> и мы вам перезвоним</h2>
+            <h3>Введите ваше имя</h3>
+            <input type="text" required name="name">
+            <h3>Введите ваш телефон</h3>
+            <input type="text" required name="phone">
+            <h3>Введите ваше сообщение</h3>
+            <textarea name="message" required ></textarea>
+            <button class="form__btn" type="submit">Отправить</button>
+        `;
+        modalWrapper.append(form);
+        modal.classList.add('active');
+    });
 });
-    
+
+
+
+
+window.addEventListener('click', (e)=>{
+    if(e.target == closeModal || e.target == modalContainer){   
+        modal.classList.remove('active');
+        setTimeout(()=>{modalWrapper.children[1].remove();}, 300);
+    }
+});
+
+
 
